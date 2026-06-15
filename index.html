@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ============================================================= -->
+  <!--  WHEN YOUR WEBSITE IS READY:                                  -->
+  <!--  Put your new URL between the quotes below, then commit.      -->
+  <!--  Leave it EMPTY ("") to keep showing the Coming Soon page.    -->
+  <!-- ============================================================= -->
+  <script>
+    var DESTINATION = "";
+  </script>
+  <!-- ============================================================= -->
+
+  <title>Coming Soon</title>
+
+  <!-- Redirect immediately IF a destination has been set. -->
+  <script>
+    if (DESTINATION && DESTINATION.trim() !== "") {
+      window.location.replace(DESTINATION);
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at 30% 20%, #1e293b 0%, #0f172a 60%, #020617 100%);
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .card {
+      max-width: 560px;
+      width: 100%;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      border-radius: 999px;
+      padding: 0.4rem 1rem;
+      margin-bottom: 1.6rem;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 7vw, 3.6rem);
+      line-height: 1.1;
+      margin: 0 0 1rem;
+      background: linear-gradient(90deg, #e2e8f0, #38bdf8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      font-size: 1.05rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin: 0 auto;
+      max-width: 420px;
+    }
+    .dots {
+      margin-top: 2.2rem;
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .dots span {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: #38bdf8;
+      opacity: 0.3;
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+    .dots span:nth-child(2) { animation-delay: 0.2s; }
+    .dots span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50%      { opacity: 1;   transform: scale(1.4); }
+    }
+    footer {
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">Launching Soon</div>
+    <h1>Something great<br>is on the way.</h1>
+    <p>We're putting the finishing touches on our new website. Scan again soon — it'll be live here.</p>
+    <div class="dots"><span></span><span></span><span></span></div>
+    <footer>Thanks for your patience.</footer>
+  </div>
+</body>
+</html>
